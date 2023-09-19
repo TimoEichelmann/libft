@@ -34,9 +34,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 	int		start;
 	int		trail;
 	char	*res;
-	int		ind;
 
-	ind = 0;
 	start = 0;
 	trail = ft_strlen(s1) - 1;
 	while (ft_test(s1[start], set) && s1[start])
