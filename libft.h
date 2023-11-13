@@ -36,8 +36,8 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstdelone(t_list *lst, void (*del)(void*));
-void			ft_lstadd_back(t_stack **lst, t_stack *new);
-t_stack			*ft_lstlast(t_stack *lst);
+void			ft_lstadd_back(t_list **lst, t_list *new);
+t_list			*ft_lstlast(t_list *list);
 int				ft_lstsize(t_list *lst);
 void			ft_lstadd_front(t_list **lst, t_list *new);
 t_list			*ft_lstnew(void *content);
@@ -86,4 +86,11 @@ int				ft_void_pointer(void *p);
 int				ft_hexconverter_long(unsigned long long int h);
 int				ft_hexconverter(unsigned int h, const char *p, int u);
 int				ft_hexadecimal_len(unsigned int h);
+char				*get_next_line(int fd);
+char				*ft_read(int fd, char *stash);
+char				*ft_left_stash(char *stash, char *line);
+int				ft_nl_check(char *p);
+char				*ft_strjoin_gnl(char *stash, char *buf);
+char				*ft_getline(char *stash);
+
 #endif
