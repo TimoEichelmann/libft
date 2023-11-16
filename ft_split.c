@@ -82,6 +82,6 @@ char	**ft_split(const char *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 	}
-	p[j] = 0;
+	p[j] = NULL;
 	return (p);
 }
